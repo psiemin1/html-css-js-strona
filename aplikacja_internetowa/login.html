@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="/" id="navbar__logo"></i>BookHub</a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span> <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="/" class="navbar__links">Strona główna</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/kup.html" class="navbar__links">Kup</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/" class="navbar__links">Sprzedaj</a>
+          </li>
+          <li class="navbar__btn"><a href="login.html" class="button">Zaloguj się</a></li>
+        </ul>
+      </div>
+    </nav>
+
+ <!-- Google Login -->
+  <div class="google-login-container">
+    <h1>Zaloguj się</h1>
+    <a href="#" class="google-btn">
+      <i class="fa-brands fa-google"></i> Zaloguj przez Google
+    </a>
+  </div>
+
+
+    <!-- Footer Section -->
+<footer class="footer__container">
+  <p class="website__rights">© 2025 BookHub. Wszelkie prawa zastrzeżone.</p>
+</footer>
+<script type="module" src="firebase.js"></script>
+<script type="module" src="auth.js"></script>
+</body>
+</html>

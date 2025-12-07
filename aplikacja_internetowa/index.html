@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookHub</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="/" id="navbar__logo"></i>BookHub</a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span> <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="/" class="navbar__links">Strona główna</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/kup.html" class="navbar__links">Kup</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/" class="navbar__links">Sprzedaj</a>
+          </li>
+          <li class="navbar__btn"><a href="login.html" class="button">Zaloguj się</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Section -->
+    <div class="main">
+      <div class="main__container">
+        <div class="main__content">
+          <h1>BookHub</h1>
+          <p>Kupuj i sprzedawaj.</p>
+          <button class="main__btn"><a href="#">Przeglądaj</a></button>
+        </div>
+        <div class="main__img--container">
+          <img id="main__img" src="images/pic1.svg" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Section -->
+    <div class="services">
+      <h1>Tysiące książek - jedna platforma</h1>
+      <div class="services__container">
+        <div class="services__card">
+          <h2>Bestsellery</h2>
+          <p>Musisz to przeczytać!</p>
+          <button>Przejdź</button>
+        </div>
+        <div class="services__card">
+          <h2>Promocje</h2>
+          <p>Złap okazję!</p>
+          <button>Przejdź</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+<footer class="footer__container">
+  <p class="website__rights">© 2025 BookHub. Wszelkie prawa zastrzeżone.</p>
+</footer>
+<script src="app.js"></script>
+<script type="module" src="firebase.js"></script>
+<script type="module" src="auth.js"></script>
+</body>
+</html>
