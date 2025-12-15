@@ -1,12 +1,13 @@
 import { db, auth } from "./firebase.js";
 import {
   collection,
-  addDoc,
+  addDoc
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
 const form = document.querySelector(".sell__form");
 
+// Tylko zalogowani mogą dodawać książki
 onAuthStateChanged(auth, (user) => {
   if (!user) {
     alert("Musisz się zalogować, aby sprzedawać książki!");
@@ -29,12 +30,15 @@ form.addEventListener("submit", async (e) => {
       description,
       price,
       createdBy: auth.currentUser.uid,
-      createdAt: new Date(),
+      sellerName: auth.currentUser.displayName,
+      sellerEmail: auth.currentUser.email,
+      createdAt: new Date()
     });
 
     alert("Książka została dodana!");
     form.reset();
   } catch (error) {
     console.error("Błąd:", error);
+    alert("Nie udało się dodać książki");
   }
 });

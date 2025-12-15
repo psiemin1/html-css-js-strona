@@ -4,72 +4,72 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kup książkę – BookHub</title>
+
     <link rel="stylesheet" href="styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
   </head>
+
   <body>
-    <!-- Navbar Section -->
+    <!-- Navbar -->
     <nav class="navbar">
-      <div class="navbar__container">
-        <a href="/" id="navbar__logo"></i>BookHub</a>
-        <div class="navbar__toggle" id="mobile-menu">
-          <span class="bar"></span> <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-        <ul class="navbar__menu">
-          <li class="navbar__item"><a href="/" class="navbar__links">Strona główna</a></li>
-          <li class="navbar__item"><a href="/kup.html" class="navbar__links">Kup</a></li>
-          <li class="navbar__item"><a href="/sprzedaj.html" class="navbar__links">Sprzedaj</a></li>
-          <li class="navbar__btn"><a href="/login.html" class="button">Zaloguj się</a></li>
-        </ul>
-      </div>
-    </nav>
+  <div class="navbar__container">
+    <a href="/" id="navbar__logo">BookHub</a>
+
+    <div class="navbar__toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+    <ul class="navbar__menu">
+      <li class="navbar__item">
+        <a href="/" class="navbar__links">Strona główna</a>
+      </li>
+
+      <li class="navbar__item">
+        <a href="/kup.html" class="navbar__links">Kup</a>
+      </li>
+
+      <li class="navbar__item">
+        <a href="/ulubione.html" class="navbar__links">Ulubione</a>
+      </li>
+
+      <li class="navbar__item">
+        <a href="/sprzedaj.html" class="navbar__links">Sprzedaj</a>
+      </li>
+
+      <!-- JEDYNY ELEMENT ZMIENIANY PRZEZ JS -->
+      <li class="navbar__item" id="auth-item">
+        <a href="/login.html" class="navbar__links" id="auth-link">
+          Zaloguj się
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
     <!-- KUP SECTION -->
     <div class="shop">
       <h1>Kup książki</h1>
       <p>Znajdź idealną książkę dla siebie.</p>
 
-      <div class="shop__container">
-        <!-- BOOK CARD 1 -->
-        <div class="book__card">
-          <img src="images/book1.jpg" alt="Okładka książki" class="book__img" />
-          <h2>Tytuł książki</h2>
-          <p class="book__author">Autor książki</p>
-          <p class="book__price">29.99 zł</p>
-          <button class="book__btn">Kup teraz</button>
-        </div>
-
-        <!-- BOOK CARD 2 -->
-        <div class="book__card">
-          <img src="images/book2.jpg" alt="Okładka książki" class="book__img" />
-          <h2>Inna książka</h2>
-          <p class="book__author">Autor</p>
-          <p class="book__price">39.99 zł</p>
-          <button class="book__btn">Kup teraz</button>
-        </div>
-
-        <!-- BOOK CARD 3 -->
-        <div class="book__card">
-          <img src="images/book3.jpg" alt="Okładka książki" class="book__img" />
-          <h2>Kolejna powieść</h2>
-          <p class="book__author">Pisarz</p>
-          <p class="book__price">24.50 zł</p>
-          <button class="book__btn">Kup teraz</button>
-        </div>
-      </div>
+      <div class="shop__container"></div>
     </div>
 
     <!-- Footer -->
     <footer class="footer__container">
-      <p class="website__rights">© 2025 BookHub. Wszelkie prawa zastrzeżone.</p>
+      <p class="website__rights">
+        © 2025 BookHub. Wszelkie prawa zastrzeżone.
+      </p>
     </footer>
 
+    <!-- Scripts -->
     <script src="app.js"></script>
     <script type="module" src="firebase.js"></script>
     <script type="module" src="auth.js"></script>
+    <script type="module" src="buy.js"></script>
   </body>
 </html>
