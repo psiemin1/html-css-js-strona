@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sprzedaj książkę – BookHub</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+  <div class="navbar__container">
+    <a href="/" id="navbar__logo">BookHub</a>
+
+    <div class="navbar__toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+    <ul class="navbar__menu">
+      <li class="navbar__item">
+        <a href="/" class="navbar__links">Strona główna</a>
+      </li>
+
+      <li class="navbar__item">
+        <a href="/kup.html" class="navbar__links">Kup</a>
+      </li>
+
+      <li class="navbar__item">
+        <a href="/ulubione.html" class="navbar__links">Ulubione</a>
+      </li>
+
+      <li class="navbar__item">
+        <a href="/sprzedaj.html" class="navbar__links">Sprzedaj</a>
+      </li>
+
+      <!-- JEDYNY ELEMENT ZMIENIANY PRZEZ JS -->
+      <li class="navbar__item" id="auth-item">
+        <a href="/login.html" class="navbar__links" id="auth-link">
+          Zaloguj się
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+    <!-- SELL SECTION -->
+    <div class="sell">
+      <h1>Sprzedaj książkę</h1>
+      <p>Wypełnij formularz, aby dodać swoją książkę na BookHub.</p>
+
+      <div class="sell__container">
+        <form class="sell__form">
+          <label>Tytuł książki</label>
+          <input type="text" placeholder="Wpisz tytuł" required />
+
+          <label>Autor</label>
+          <input type="text" placeholder="Podaj autora" required />
+
+          <label>Opis</label>
+          <textarea placeholder="Krótki opis książki" required></textarea>
+
+          <label>Cena (zł)</label>
+          <input type="number" step="0.01" placeholder="np. 29.99" required />
+
+          <!-- USUNIĘTO ZDJĘCIE – NIE UŻYWAMY STORAGE -->
+          <button type="submit" class="sell__btn">Dodaj książkę</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer__container">
+      <p class="website__rights">
+        © 2026 BookHub. Wszelkie prawa zastrzeżone.
+      </p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+    <script type="module" src="firebase.js"></script>
+    <script type="module" src="auth.js"></script>
+    <script type="module" src="sell.js"></script>
+  </body>
+</html>

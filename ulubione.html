@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ulubione – BookHub</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="navbar__container">
+    <a href="/" id="navbar__logo">BookHub</a>
+
+    <div class="navbar__toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+    <ul class="navbar__menu">
+      <li class="navbar__item">
+        <a href="/" class="navbar__links">Strona główna</a>
+      </li>
+
+      <li class="navbar__item">
+        <a href="/kup.html" class="navbar__links">Kup</a>
+      </li>
+
+      <li class="navbar__item">
+        <a href="/ulubione.html" class="navbar__links">Ulubione</a>
+      </li>
+
+      <li class="navbar__item">
+        <a href="/sprzedaj.html" class="navbar__links">Sprzedaj</a>
+      </li>
+
+      <!-- JEDYNY ELEMENT ZMIENIANY PRZEZ JS -->
+      <li class="navbar__item" id="auth-item">
+        <a href="/login.html" class="navbar__links" id="auth-link">
+          Zaloguj się
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ULUBIONE -->
+<div class="shop">
+  <h1>Moje ulubione książki</h1>
+  <p>Zapisane ogłoszenia</p>
+
+  <div class="shop__container"></div>
+</div>
+
+<footer class="footer__container">
+  <p class="website__rights">© 2026 BookHub. Wszelkie prawa zastrzeżone.</p>
+</footer>
+
+<script src="app.js"></script>
+<script type="module" src="firebase.js"></script>
+<script type="module" src="auth.js"></script>
+<script type="module" src="favorites.js"></script>
+</body>
+</html>
